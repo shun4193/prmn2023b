@@ -4,15 +4,21 @@ import java.util.Scanner;
 
 public class Login {
 
-    private String[][] studentNumberAnsPasswords = new String[][]{
-            {"B2221950", "aiueo"},
-            {"B2225043", "kakikukeko"},
-            {"B2221435", "sasisuseso"},
-            {"B2225341", "tatituteto"},
-            {"B2226435", "naninuneno"},
-    };
+    private String[][] studentNumberAnsPasswords;
 
-    private Scanner scan = new Scanner(System.in);
+    private Scanner scan;
+
+    Login() {
+        studentNumberAnsPasswords = new String[][]{
+                {"B2221950", "aiueo"},
+                {"B2225043", "kakikukeko"},
+                {"B2221435", "sasisuseso"},
+                {"B2225341", "tatituteto"},
+                {"B2226435", "naninuneno"},
+        };
+
+        scan = new Scanner(System.in);
+    }
 
     int exisistNumber() {
         System.out.print("学籍番号を入力してください : ");
