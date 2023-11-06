@@ -14,6 +14,7 @@ public class prac2 {
         }
 
         Keisan kei = new Keisan();
-        kei.resultPrint(num);
+        int sum = kei.sum(num);
+        kei.resultPrint(sum);
     }
 }

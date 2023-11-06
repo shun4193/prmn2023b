@@ -4,12 +4,12 @@ import java.util.Scanner;
 
 public class Login {
 
-    private String[][] studentNumberAnsPasswords;
+    private String[][] studentNumberAndPasswords;
 
     private Scanner scan;
 
     Login() {
-        studentNumberAnsPasswords = new String[][]{
+        studentNumberAndPasswords = new String[][]{
                 {"B2221950", "aiueo"},
                 {"B2225043", "kakikukeko"},
                 {"B2221435", "sasisuseso"},
@@ -20,13 +20,13 @@ public class Login {
         scan = new Scanner(System.in);
     }
 
-    int exisistNumber() {
+    int existNumber() {
         System.out.print("学籍番号を入力してください : ");
         String number = scan.next();
 
         int matchIndex = -1;
-        for(int i = 0; i < studentNumberAnsPasswords.length; i++) {
-            if(number.equals(studentNumberAnsPasswords[i][0])) {
+        for(int i = 0; i < studentNumberAndPasswords.length; i++) {
+            if(number.equals(studentNumberAndPasswords[i][0])) {
                 matchIndex = i;
                 break;
             }
@@ -34,9 +34,9 @@ public class Login {
         return matchIndex;
     }
 
-    boolean exisistPassword(int index) {
+    boolean matchPassword(int index) {
         System.out.print("パスワードを入力してください : ");
         String password = scan.next();
-        return studentNumberAnsPasswords[index][1].equals(password);
+        return studentNumberAndPasswords[index][1].equals(password);
     }
 }
