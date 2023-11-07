@@ -14,7 +14,6 @@ public class pra2_2 {
         String name_2 = scan.next();
         System.out.print("学籍番号を入力してください。");
         int num_2 = scan.nextInt();
-        //String message = log.sys(name_2, num_2);
-        //message.mes();
+        log.message(name_2, num_2);
     }
 }
