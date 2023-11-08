@@ -1,7 +1,5 @@
 package jp.ac.chitose.db_prac;
 
-import org.w3c.dom.ls.LSOutput;
-
 import java.sql.SQLException;
 import java.util.List;
 import java.util.Scanner;
